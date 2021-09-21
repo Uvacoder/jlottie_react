@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import anim from './anim.json';
+import * as jLottie from '@lottiefiles/jlottie';
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    jLottie.loadAnimation({
+        container: document.querySelector("#animation"),
+        animationData: JSON.stringify(anim)
+    });
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div id='animation'></div>
     </div>
   );
 }
