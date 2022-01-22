@@ -1,4 +1,4 @@
-import anim from './anim.json';
+import anim from './lottie-adidas-rider.json';
 import * as jLottie from '@lottiefiles/jlottie';
 import './App.css';
 import { useEffect } from 'react';
